@@ -1,12 +1,13 @@
 // si quisieras extraer el color, que esta entre soundData-Habado-color
 // soundData["habado"]["color"]
 
-var datos=$('[id]');
+var datos=$('#guide-taxa [id]'); //Para extraer en el div de id="guide-taxa", todos los id
 var avesData={};
 var lastPlay="golondrina";
 
+
 //para pasar solos los nombres a un array/object
-for(var x=1;x<datos.length;x++){
+for(var x=0;x<datos.length;x++){
   var nombres={};
   nombres[x]=datos[x].id;
 
