@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonido de aves</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="aves_sonido.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.js"></script>
+    <script type="text/javascript" src="lib/jquery-3.4.1.min.js"></script>
+    
+
+</head>
+<body>
+    
+
+    <div class="jumbotron enunciado">
+        <h1>Aves en la Universidad Industrial de Santander</h1>
+        <p>
+            Gracias el semillero de ornitología de la Universidad Industrial de Santander, por organizar con fotos y la información 
+            para que esto sea realidad, pueden consultar esta información aquí: <a href="https://colombia.inaturalist.org/guides/9333">Guía aves UIS</a> y 
+            gracias a la web <a href="https://www.xeno-canto.org/">Sonido de aves</a> de la cual se extrajo los sonidos.
+
+             
+        </p>
+    </div>
+    
+
+    <!-- Informacion extraida de aves uis -->
+    <div id="guide-taxa">
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless test" id="habado">  <img class="img-responsive habado" src="./aves_files/small.jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001800">Carpintero habado
+        </a><sup><a name="cit1" href="https://colombia.inaturalist.org/guides/9333#ref1">1</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Melanerpes rubricapillus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class=" thumbnail borderless test" id="buchipecoso" ><img class="img-responsive" src="./aves_files/small(1).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001801">Carpintero buchipecoso
+        </a><sup><a name="cit1" href="https://colombia.inaturalist.org/guides/9333#ref1">1</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Colaptes punctigula</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="lora"><img class="img-responsive" src="./aves_files/small(2).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001798">Lora cabeciamarilla
+        </a><sup><a name="cit2" href="https://colombia.inaturalist.org/guides/9333#ref2">2</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Amazona ochrocephala</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="perico"><img class="img-responsive" src="./aves_files/small(3).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001799">Perico de anteojos
+        </a><sup><a name="cit3" href="https://colombia.inaturalist.org/guides/9333#ref3">3</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Forpus conspicillatus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="periquito"><img class="img-responsive" src="./aves_files/small(4).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001797">Periquito Alas Amarillas
+        </a><sup><a name="cit4" href="https://colombia.inaturalist.org/guides/9333#ref4">4</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Brotogeris jugularis</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="tortolita"><img class="img-responsive" src="./aves_files/small(5).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001793">Tortolita Canela
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Columbina talpacoti</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="buitre"><img class="img-responsive" src="./aves_files/small(6).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001789">Buitre americano cabecirrojo
+        </a><sup><a name="cit6" href="https://colombia.inaturalist.org/guides/9333#ref6">6</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Cathartes aura</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="zopilote"><img class="img-responsive" src="./aves_files/small.jpeg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001788">Zopilote común
+        </a><sup><a name="cit7" href="https://colombia.inaturalist.org/guides/9333#ref7">7</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Coragyps atratus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="chimachima"><img class="img-responsive" src="./aves_files/small(7).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001792">Chimachimá
+        </a><sup><a name="cit8" href="https://colombia.inaturalist.org/guides/9333#ref8">8</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Milvago chimachima</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="ermitano"><img class="img-responsive" src="./aves_files/small(8).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001796">Ermitaño verde
+        </a><sup><a name="cit9" href="https://colombia.inaturalist.org/guides/9333#ref9">9</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Phaethornis guy</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="canela"><img class="img-responsive" src="./aves_files/small(9).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001795">Colibrí Cola Canela
+        </a><sup><a name="cit10" href="https://colombia.inaturalist.org/guides/9333#ref10">10</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Amazilia tzacatl</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="mango"><img class="img-responsive" src="./aves_files/small(10).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001794">Mango Gorginegro
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Anthracothorax nigricollis</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="caminera"><img class="img-responsive" src="./aves_files/small(11).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001790">Aguililla caminera
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Rupornis magnirostris</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="colacorta"><img class="img-responsive" src="./aves_files/small(12).jpeg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001791">Aguililla cola corta
+        </a><sup><a name="cit11" href="https://colombia.inaturalist.org/guides/9333#ref11">11</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Buteo brachyurus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="golondrina"><img class="img-responsive" src="./aves_files/small(13).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001817">Golondrina Albiazul
+        </a><sup><a name="cit9" href="https://colombia.inaturalist.org/guides/9333#ref9">9</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Pygochelidon cyanoleuca</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="tordo"><img class="img-responsive" src="./aves_files/small(14).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001837">Tordo Sudamericano
+        </a><sup><a name="cit12" href="https://colombia.inaturalist.org/guides/9333#ref12">12</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Molothrus bonariensis</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="turpial"><img class="img-responsive" src="./aves_files/small(15).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001838">Turpial amarillo
+        </a><sup><a name="cit1" href="https://colombia.inaturalist.org/guides/9333#ref1">1</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Icterus nigrogularis</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="caribeno"><img class="img-responsive" src="./aves_files/small(16).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001836">Zanate caribeño
+        </a><sup><a name="cit13" href="https://colombia.inaturalist.org/guides/9333#ref13">13</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Quiscalus lugubris</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="batara"><img class="img-responsive" src="./aves_files/small(17).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001802">Batará carcajada
+        </a><sup><a name="cit14" href="https://colombia.inaturalist.org/guides/9333#ref14">14</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Thamnophilus multistriatus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="cucarachero"><img class="img-responsive" src="./aves_files/small(18).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001818">Cucarachero bicolor
+        </a><sup><a name="cit15" href="https://colombia.inaturalist.org/guides/9333#ref15">15</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Campylorhynchus griseus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="saltapared"><img class="img-responsive" src="./aves_files/small(19).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001819">Saltapared Común
+        </a><sup><a name="cit9" href="https://colombia.inaturalist.org/guides/9333#ref9">9</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Troglodytes aedon</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="mayo"><img class="img-responsive" src="./aves_files/small(20).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001820">Mayo
+        </a><sup><a name="cit16" href="https://colombia.inaturalist.org/guides/9333#ref16">16</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Turdus ignobilis</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="zorzal"><img class="img-responsive" src="./aves_files/small(21).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001821">Zorzal sabiá
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Turdus leucomelas</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="apicalis"><img class="img-responsive" src="./aves_files/small(22).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001814"><i>Myiarchus apicalis</i>
+        </a><sup><a name="cit17" href="https://colombia.inaturalist.org/guides/9333#ref17">17</a></sup>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="papamoscas"><img class="img-responsive" src="./aves_files/small(23).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001812">Papamoscas Rayado Cheje
+        </a><sup><a name="cit18" href="https://colombia.inaturalist.org/guides/9333#ref18">18</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Myiodynastes maculatus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="cardenal"><img class="img-responsive" src="./aves_files/small(24).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001808">Mosquero cardenal
+        </a><sup><a name="cit19" href="https://colombia.inaturalist.org/guides/9333#ref19">19</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Pyrocephalus rubinus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="mosquerito"><img class="img-responsive" src="./aves_files/small(25).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001807">Mosquerito Ojos Blancos
+        </a><sup><a name="cit9" href="https://colombia.inaturalist.org/guides/9333#ref9">9</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Tolmomyias sulphurescens</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="luis"><img class="img-responsive" src="./aves_files/small(26).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001809">Luis pico grueso
+        </a><sup><a name="cit20" href="https://colombia.inaturalist.org/guides/9333#ref20">20</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Megarynchus pitangua</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="piriri"><img class="img-responsive" src="./aves_files/small(27).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001804">Tirano Pirirí
+        </a><sup><a name="cit21" href="https://colombia.inaturalist.org/guides/9333#ref21">21</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Tyrannus melancholicus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="tijereta"><img class="img-responsive" src="./aves_files/small(28).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001803">Tirano Tijereta Gris
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Tyrannus savana</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="alicastano"><img class="img-responsive" src="./aves_files/small(29).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001811">Bienteveo alicastaño
+        </a><sup><a name="cit22" href="https://colombia.inaturalist.org/guides/9333#ref22">22</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Myiozetetes cayanensis</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="bienteveo"><img class="img-responsive" src="./aves_files/small(30).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001810">Bienteveo común
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Pitangus sulphuratus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="espatulilla"><img class="img-responsive" src="./aves_files/small(31).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001806">Mosquerito Espatulilla Común
+        </a><sup><a name="cit9" href="https://colombia.inaturalist.org/guides/9333#ref9">9</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Todirostrum cinereum</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="bueyero"><img class="img-responsive" src="./aves_files/small(32).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001805">Sirirí bueyero
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Machetornis rixosa</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="rayadochico"><img class="img-responsive" src="./aves_files/small(33).JPG" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001813">Papamoscas Rayado Chico
+        </a><sup><a name="cit23" href="https://colombia.inaturalist.org/guides/9333#ref23">23</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Legatus leucophaius</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="cejascanela"><img class="img-responsive" src="./aves_files/small(34).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001816">Vireón Cejas Canela
+        </a><sup><a name="cit5" href="https://colombia.inaturalist.org/guides/9333#ref5">5</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Cyclarhis gujanensis</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="paticlaro"><img class="img-responsive" src="./aves_files/small(35).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001815">verdillo paticlaro
+        </a><sup><a name="cit24" href="https://colombia.inaturalist.org/guides/9333#ref24">24</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Hylophilus flavipes</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="centzontle"><img class="img-responsive" src="./aves_files/small(36).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001822">Centzontle tropical
+        </a><sup><a name="cit25" href="https://colombia.inaturalist.org/guides/9333#ref25">25</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Mimus gilvus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="chipecastano"><img class="img-responsive" src="./aves_files/small(37).JPG" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001832">Chipe castaño
+        </a><sup><a name="cit26" href="https://colombia.inaturalist.org/guides/9333#ref26">26</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Setophaga castanea</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="chipeamarillo"><img class="img-responsive" src="./aves_files/small(38).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001833">Chipe amarillo
+        </a><sup><a name="cit27" href="https://colombia.inaturalist.org/guides/9333#ref27">27</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Setophaga petechia</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="chipetropical"><img class="img-responsive" src="./aves_files/small(39).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001831">Chipe Tropical
+        </a><sup><a name="cit28" href="https://colombia.inaturalist.org/guides/9333#ref28">28</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Setophaga pitiayumi</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="chipetrepador"><img class="img-responsive" src="./aves_files/small(40).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001834">Chipe trepador
+        </a><sup><a name="cit29" href="https://colombia.inaturalist.org/guides/9333#ref29">29</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Mniotilta varia</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="chipeperegrino"><img class="img-responsive" src="./aves_files/small(41).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001835">Chipe peregrino
+        </a><sup><a name="cit30" href="https://colombia.inaturalist.org/guides/9333#ref30">30</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Oreothlypis peregrina</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="reinita"><img class="img-responsive" src="./aves_files/small(42).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001829">Reinita mielera
+        </a><sup><a name="cit31" href="https://colombia.inaturalist.org/guides/9333#ref31">31</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Coereba flaveola</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="azulgris"><img class="img-responsive" src="./aves_files/small(43).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001823">Tangara azulgris
+        </a><sup><a name="cit25" href="https://colombia.inaturalist.org/guides/9333#ref25">25</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Thraupis episcopus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="palmera"><img class="img-responsive" src="./aves_files/small(44).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001824">Tángara palmera
+        </a><sup><a name="cit32" href="https://colombia.inaturalist.org/guides/9333#ref32">32</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Thraupis palmarum</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="gorrion"><img class="img-responsive" src="./aves_files/small(45).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001830">Gorrión negro
+        </a><sup><a name="cit33" href="https://colombia.inaturalist.org/guides/9333#ref33">33</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Tiaris bicolor</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="saltadorgris"><img class="img-responsive" src="./aves_files/small(46).jpeg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001828">Saltador Gris
+        </a><sup><a name="cit34" href="https://colombia.inaturalist.org/guides/9333#ref34">34</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Saltator coerulescens</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        <div class="row stacked">
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="saltadorocre"><img class="img-responsive" src="./aves_files/small(47).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001826">Saltador Garganta Ocre
+        </a><sup><a name="cit35" href="https://colombia.inaturalist.org/guides/9333#ref35">35</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Saltator maximus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="saltadorjudio"><img class="img-responsive" src="./aves_files/small(48).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001827">Saltador pío judío
+        </a><sup><a name="cit3" href="https://colombia.inaturalist.org/guides/9333#ref3">3</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Saltator striatipectus</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="canario"><img class="img-responsive" src="./aves_files/small(49).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001825">Canario coronado
+        </a><sup><a name="cit8" href="https://colombia.inaturalist.org/guides/9333#ref8">8</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Sicalis flaveola</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        <div class="col-xs-3">
+        <a class="thumbnail borderless" id="eufonia"><img class="img-responsive" src="./aves_files/small(50).jpg" alt="Small"></a>
+        <h5>
+        <a href="https://colombia.inaturalist.org/guide_taxa/1001839">Eufonia piquigruesa
+        </a><sup><a name="cit18" href="https://colombia.inaturalist.org/guides/9333#ref18">18</a></sup>
+        <div class="quiet">
+        <small>
+        <i>Euphonia laniirostris</i>
+        </small>
+        </div>
+        </h5>
+        </div>
+        </div>
+        
+        </div>
+
+        <div class="meta upstacked row"  >
+            <div class="col-xs-12">
+                <p>
+                    Editado por <a >Ivan F. Rueda Duarte</a>, algunos derechos reservados (<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>)
+                    
+                </p>
+            
+            <p>
+            Apartir de la edición de <a content_method="login" class="nickname" title="danielbadillom" href="https://colombia.inaturalist.org/people/danielbadillom">Daniel Badillo Mojica </a>, algunos derechos reservados (<a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>)
+            
+            </p>
+            <p>
+            Créditos de las fotos
+            </p><ul class="references"><li class="reference" id="ref1"><a href="https://colombia.inaturalist.org/guides/9333#cit1">1</a>. (c) barloventomagico, algunos derechos reservados (CC BY-NC-ND)</li><li class="reference" id="ref2"><a href="https://colombia.inaturalist.org/guides/9333#cit2">2</a>. (c) Doug Greenberg, algunos derechos reservados (CC BY-NC-ND)</li><li class="reference" id="ref3"><a href="https://colombia.inaturalist.org/guides/9333#cit3">3</a>. (c) Julian Londono, algunos derechos reservados (CC BY-SA)</li><li class="reference" id="ref4"><a href="https://colombia.inaturalist.org/guides/9333#cit4">4</a>. (c) David Cook, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref5"><a href="https://colombia.inaturalist.org/guides/9333#cit5">5</a>. (c) Dario Sanches, algunos derechos reservados (CC BY-SA)</li><li class="reference" id="ref6"><a href="https://colombia.inaturalist.org/guides/9333#cit6">6</a>. (c) Maggie.Smith, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref7"><a href="https://colombia.inaturalist.org/guides/9333#cit7">7</a>. (c) Bobby McCabe, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref8"><a href="https://colombia.inaturalist.org/guides/9333#cit8">8</a>. (c) Guillermo Vasquez, algunos derechos reservados (CC BY)</li><li class="reference" id="ref9"><a href="https://colombia.inaturalist.org/guides/9333#cit9">9</a>. (c) Jerry Oldenettel, algunos derechos reservados (CC BY-NC-SA)</li><li class="reference" id="ref10"><a href="https://colombia.inaturalist.org/guides/9333#cit10">10</a>. (c) David Cook Wildlife Photography, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref11"><a href="https://colombia.inaturalist.org/guides/9333#cit11">11</a>. (c) Joe MDO, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref12"><a href="https://colombia.inaturalist.org/guides/9333#cit12">12</a>. (c) Lip Kee Yap, algunos derechos reservados (CC BY-SA)</li><li class="reference" id="ref13"><a href="https://colombia.inaturalist.org/guides/9333#cit13">13</a>. (c) Francisco Carlos Calderòn Bocanegra, algunos derechos reservados (CC BY-NC-SA)</li><li class="reference" id="ref14"><a href="https://colombia.inaturalist.org/guides/9333#cit14">14</a>. (c) ARALCAL by julian londono, algunos derechos reservados (CC BY-SA)</li><li class="reference" id="ref15"><a href="https://colombia.inaturalist.org/guides/9333#cit15">15</a>. (c) Carol McDougall, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref16"><a href="https://colombia.inaturalist.org/guides/9333#cit16">16</a>. (c) Patton, algunos derechos reservados (CC BY-NC-SA)</li><li class="reference" id="ref17"><a href="https://colombia.inaturalist.org/guides/9333#cit17">17</a>. (c) Dave Curtis, algunos derechos reservados (CC BY-NC-ND)</li><li class="reference" id="ref18"><a href="https://colombia.inaturalist.org/guides/9333#cit18">18</a>. (c) Brian Gratwicke, algunos derechos reservados (CC BY)</li><li class="reference" id="ref19"><a href="https://colombia.inaturalist.org/guides/9333#cit19">19</a>. (c) davy, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref20"><a href="https://colombia.inaturalist.org/guides/9333#cit20">20</a>. (c) Steve Garvie, algunos derechos reservados (CC BY-NC-SA)</li><li class="reference" id="ref21"><a href="https://colombia.inaturalist.org/guides/9333#cit21">21</a>. (c) Ken Schneider, algunos derechos reservados (CC BY-NC), uploaded by K Schneider</li><li class="reference" id="ref22"><a href="https://colombia.inaturalist.org/guides/9333#cit22">22</a>. (c) Cullen Hanks, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref23"><a href="https://colombia.inaturalist.org/guides/9333#cit23">23</a>. (c) Erick Noe Tapia Banda, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref24"><a href="https://colombia.inaturalist.org/guides/9333#cit24">24</a>. (c) Scott Bowers, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref25"><a href="https://colombia.inaturalist.org/guides/9333#cit25">25</a>. (c) Taran Rampersad, algunos derechos reservados (CC BY-NC-SA)</li><li class="reference" id="ref26"><a href="https://colombia.inaturalist.org/guides/9333#cit26">26</a>. (c) Carmelo López Abad, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref27"><a href="https://colombia.inaturalist.org/guides/9333#cit27">27</a>. (c) Kelly Colgan Azar, algunos derechos reservados (CC BY-ND)</li><li class="reference" id="ref28"><a href="https://colombia.inaturalist.org/guides/9333#cit28">28</a>. (c) greglasley, algunos derechos reservados (CC BY-NC), uploaded by Greg Lasley</li><li class="reference" id="ref29"><a href="https://colombia.inaturalist.org/guides/9333#cit29">29</a>. (c) Andy Jones, algunos derechos reservados (CC BY-NC-SA)</li><li class="reference" id="ref30"><a href="https://colombia.inaturalist.org/guides/9333#cit30">30</a>. (c) Jerry Oldenettel, algunos derechos reservados (CC BY-SA)</li><li class="reference" id="ref31"><a href="https://colombia.inaturalist.org/guides/9333#cit31">31</a>. (c) Paul Joyce, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref32"><a href="https://colombia.inaturalist.org/guides/9333#cit32">32</a>. (c) Greg Lasley, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref33"><a href="https://colombia.inaturalist.org/guides/9333#cit33">33</a>. (c) DickDaniels, algunos derechos reservados (CC BY-SA)</li><li class="reference" id="ref34"><a href="https://colombia.inaturalist.org/guides/9333#cit34">34</a>. (c) Diego Carús, algunos derechos reservados (CC BY-NC)</li><li class="reference" id="ref35"><a href="https://colombia.inaturalist.org/guides/9333#cit35">35</a>. (c) Heather Pickard, algunos derechos reservados (CC BY-NC)</li></ul>
+            <p></p>
+            <p class="description ui spam">
+            ¿Esto es <a href="https://colombia.inaturalist.org/help#inappropriate">inapropiado</a>, spam u ofensivo?
+            <a class="flaglink" href="https://colombia.inaturalist.org/flags/new?guide_id=9333" id="flag_this" rel="nofollow">
+            Agregar una marca
+            </a>
+            </p>
+            
+            </div>
+            </div>
+
+
+        <script type="text/javascript" src="aves_sonido.js"></script>
+</body>
+</html>

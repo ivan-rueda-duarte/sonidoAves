@@ -1,0 +1,9 @@
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 25px;
+}
+
+.enunciado{
+    text-align: justify;
+    background-color: #00e676;
+}
