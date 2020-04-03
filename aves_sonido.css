@@ -5,5 +5,20 @@ body{
 
 .enunciado{
     text-align: justify;
-    background-color: #00e676;
+    background-color: #81c784;
+    
+    }
+
+h1{
+    text-align: center;
+    padding-bottom: 20px;
 }
+
+p, .enunciado{
+    padding: 20px;
+ }
+
+ .jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
