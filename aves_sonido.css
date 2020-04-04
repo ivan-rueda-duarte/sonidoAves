@@ -1,12 +1,14 @@
 body{
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Gotu', sans-serif;
     margin: 25px;
+    font-size: 15px;
 }
 
 .enunciado{
     text-align: justify;
-    background-color: #81c784;
-    
+    background-color: #4caf50;
+    color: white;
+    letter-spacing: 1px;
     }
 
 h1{
@@ -20,5 +22,42 @@ p, .enunciado{
 
  .jumbotron p {
     margin-bottom: 15px;
-    font-size: 21px;
-    font-weight: 200;
+    font-size: 20px;
+    font-weight: 500;
+ }
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 auto;
+    width: 200px;
+    left: auto;
+    right: auto;
+    margin-bottom: 10px;
+  }
+  
+  img:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  .img-fluid{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    list-style:none;
+    padding-left: 20px;
+}
+  .ref-inicio{
+      color: #ffff8d;
+      text-decoration: underline;
+  }
+  
